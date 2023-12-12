@@ -1,0 +1,50 @@
+<html>
+	<head>
+	<style>
+		body{background-color : whitesmoke;}
+	</style>
+	</head>
+   <body>
+      <form action = "{{ url_for('predict')}}" method = "POST" 
+         enctype = "multipart/form-data">
+	      <title>Предсказание: есть диабет или нет?</title>
+         <div class="form-group  purple-border">
+				  <label for="comment">Пол: 0 - женский, 1 - мужской, 2 - другое </label>
+				  <textarea class="form-control" id="query1" name="query1" rows="2" cols="5" autofocus>{{query1}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Возраст:</label>
+				  <textarea class="form-control" id="query2" name="query2" rows="2" cols="5" autofocus>{{query2}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Гипертензия: 0 - нет, 1 - да </label>
+				  <textarea class="form-control" id="query3" name="query3" rows="2" cols="5" autofocus>{{query3}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Заболевания сердца: 0 - нет, 1 - да </label>
+				  <textarea class="form-control" id="query4" name="query4" rows="2" cols="5" autofocus>{{query4}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Курение: 0 - нет инфо, 1 - да, 2 - когда-либо, но непостоянно, 3 - бросил, 4 - никогда, 5 - не актуально</label>
+				  <textarea class="form-control" id="query4" name="query5" rows="2" cols="5" autofocus>{{query5}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Индекс массы тела: </label>
+				  <textarea class="form-control" id="query4" name="query6" rows="2" cols="5" autofocus>{{query6}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Уровень гемоглобина: </label>
+				  <textarea class="form-control" id="query4" name="query7" rows="2" cols="5" autofocus>{{query7}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Уровень глюкозы в крови(мг/дл = ммоль * 18) </label>
+				  <textarea class="form-control" id="query4" name="query8" rows="2" cols="5" autofocus>{{query8}}</textarea>
+			</div>
+		 <div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" name="submit">Предсказать</button>
+			</div>	
+         <br>
+         <textarea class="form-control" id="comment" name="query10" rows="10" cols="50" autofocus>{{output1}}</textarea>
+      </form>   
+   </body>
+</html>
